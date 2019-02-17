@@ -1,27 +1,25 @@
-# ApolloTooling
+# Apollo Tooling Example
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.0.
+This is a simple example of a websocket link only
+client. Currently Apollo Dev tools doesn't work in this
+configuration. The notable problems and observations are as follows:
 
-## Development server
+1.  The dev tools won't get the schema or be able to query. ![Example](./images/basic-failure.png)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+1.  Queries can be made if the checkbox to only query
+    the cache is checked ![Example](./images/load-from-cache.png)
 
-## Code scaffolding
+1.  The whole chrome dev tools panel must be restarted
+    on every code refresh. This is troublesome in development, the primary use case for such tooling.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1.  By simply switching to an HTTP link, or presumably,
+    by only useing the ws link for subscription, I believe
+    the problems (except the reload bug), goes away.
 
-## Build
+## Running
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+* To start the client just run `npm install` and
+  `npm start` from the project root directory
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+* To start the server `npm install` and
+  `npm start` from the `server` directory
