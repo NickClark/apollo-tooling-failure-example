@@ -1,0 +1,22 @@
+{
+  "name": "apollo-server",
+  "description": "",
+  "dependencies": {
+    "apollo-datasource-rest": "latest",
+    "apollo-server": "2.1.0",
+    "graphql": "14.0.2",
+    "tslib": "^1.9.3"
+  },
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon"
+  },
+  "keywords": [],
+  "devDependencies": {
+    "@types/graphql": "14.0.1",
+    "nodemon": "1.18.4",
+    "ts-node": "^8.0.2",
+    "typescript": "^3.3.3"
+  }
+}
